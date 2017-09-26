@@ -1,0 +1,76 @@
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+}
+
+/* padding necessary with navbar to prevent overlap */
+body {
+    background: url(../images/background.png);
+    background-repeat: repeat;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    padding-top: 70px;
+}
+
+.fa-id-card-o {
+    color: darkred;
+}
+
+.fa-folder-o {
+    color: tan
+}
+
+.fa-user-o {
+    color: green
+}
+
+.navbar-fixed-top {
+    border-bottom: 2px solid #ccc;
+    min-width: 450px;
+
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+}
+
+.container-fluid {
+    padding: 0 50px;
+    margin: 0 auto;
+}
+/* header name brand */
+.navbar-brand {
+    width: 280px;
+    font-size: 32px;
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+    background: #4aaaa5;
+    padding: 5px 10px 5px 17px;
+    line-height: 40px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+    background: #ccc;
+    color: #777777;
+}
+/* remove transparent hover over brand */
+.navbar-inverse .navbar-brand:hover {
+    background-color: #4aaaa5;
+    color: #ffffff;
+}
+/* when hamburger menu appears, drop down align right */
+.navbar-nav>li>a {
+    text-align: right;
+}
+
+/* slide nav containers out for more room */
+@media screen and (max-width: 475px) {
+    .container-fluid {
+        padding: 0 5px;
+    }
+}
+
