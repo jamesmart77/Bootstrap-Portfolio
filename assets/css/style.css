@@ -10,7 +10,7 @@ body {
     background: url(../images/background.png);
     background-repeat: repeat;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-    padding-top: 70px;
+    padding-top: 80px;
 }
 
 .fa-id-card-o {
@@ -67,7 +67,54 @@ body {
     text-align: right;
 }
 
+/*------- body section------ */
+.wrapper {
+    margin-left: 34px;
+}
+/* about me panel */
+.panel-info {
+    max-width: 94%;
+}
+
+/* connect with me panel */
+.panel-default {
+    float: right;
+    margin-right: 60px;
+    border-color: #bbb;
+    padding: 0 15px 0 15px;
+    width: 250px;
+}
+
+/* panel page header formatting */
+.page-header h1,h3 {
+    color: #4aaaa5;
+}
+
+.page-header h3 {
+    text-align: center;
+}
+
+/* about me profile pic */
+.img-responsive {
+    max-width: 30%;
+    min-width: 100px;
+    height: auto;
+    border: 2px solid #bbb;
+}
+/* ---------------------------------------- */
+
 /* slide nav containers out for more room */
+@media screen and (max-width: 992px) {
+    .panel-default {
+        width: 94%;
+        float: left;
+    }
+
+    .page-header h3 {
+        text-align: left;
+    }
+}
+
 @media screen and (max-width: 475px) {
     .container-fluid {
         padding: 0 5px;
