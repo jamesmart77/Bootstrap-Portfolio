@@ -4,22 +4,34 @@ h3,
 h4 {
     font-family: 'Georgia', Times, 'Times New Roman', serif;
 }
+
+
+/* sticky header */
+
+.personal-header {
+    background-color: #4aaaa5;
+    color: #fff;
+    height: 75px;
+}
+
 .affix {
     top: 0;
     width: 100%;
 }
 
-.affix + .container-fluid {
+.affix+.container-fluid {
     padding-top: 70px;
 }
 
-/* padding necessary with navbar to prevent overlap */
 body {
     background: url(../images/background.png);
     background-repeat: repeat;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     /* padding-top: 80px; */
 }
+
+
+/* awesome font icons */
 
 .fa-id-card-o {
     color: darkred;
@@ -33,55 +45,56 @@ body {
     color: green
 }
 
+
+/* navbar container */
+
 .navbar-inverse {
-    z-index: 1;
-}
-
-
-.navbar-inverse .navbar-brand {
-    color: #ffffff;
+    z-index: 2;
 }
 
 .container-fluid {
     padding: 0 50px;
     margin: 0 auto;
 }
-/* header name brand */
-.navbar-brand {
-    width: 280px;
-    font-size: 32px;
-    font-family: 'Georgia', Times, 'Times New Roman', serif;
-    background: #4aaaa5;
-    padding: 5px 10px 5px 17px;
-    line-height: 40px;
-}
+
+
+/* nav bar link colors */
 
 .navbar-inverse .navbar-nav>li>a {
     color: #ffffff;
 }
 
+
+/* navbar link hover */
+
 .navbar-inverse .navbar-nav li a:hover {
     background: #ccc;
     color: #777777;
 }
-/* remove transparent hover over brand */
-.navbar-inverse .navbar-brand:hover {
-    background-color: #4aaaa5;
-    color: #ffffff;
-}
+
+
 /* when hamburger menu appears, drop down align right */
+/* navbar option align right */
+
 .navbar-nav>li>a {
     text-align: right;
 }
 
-/*------- body section------ */
+
+/*------- general content section------ */
+
 
 /* about me panel */
+
 .panel-info {
     max-width: 100%;
+    margin-bottom: 80px;
+    overflow: scroll;
 }
 
+
 /* connect with me panel */
+
 .panel-default {
     float: right;
     border-color: #bbb;
@@ -90,11 +103,15 @@ body {
     margin-bottom: 15px;
 }
 
+
 /* panel page header formatting */
+
 .page-header {
     margin-bottom: 10px;
 }
-.page-header h1,h3 {
+
+.page-header h1,
+h3 {
     color: #4aaaa5;
 }
 
@@ -102,8 +119,10 @@ body {
     text-align: center;
 }
 
+
 /* about me profile pic */
-.img-responsive {
+
+.profile-pic {
     max-width: 30%;
     min-width: 100px;
     height: auto;
@@ -116,39 +135,141 @@ body {
     line-height: 24px;
 }
 
+
+/* connect with me */
+
+.icons {
+    margin: auto;
+}
+
+.connect-pic {
+    width: 72px;
+    height: auto;
+    float: left;
+    margin: 5px 5px 20px 6px;
+}
+
+.connect-pic:hover {
+    width: 80px;
+    margin: -2px;
+}
+
+
+/* portfolio pic */
+
+.portfolio-pic {
+    width: 100%;
+    margin: 5px;
+}
+
+.portfolio-row {
+    margin: -45px -15px 0 -15px;
+}
+
+.label {
+    width: 100%;
+    height: 45px;
+    z-index: 1;
+    float: left;
+    position: relative;
+    bottom: -200px;
+    left: 5px;
+    line-height: 40px;
+    font-size: 21px;
+    background-color: #4aaaa5;
+}
+
+.portfolio-pic:hover {
+    border: 3px solid #bbb;
+    /* negative margin helps stabalize other element -- cleaner */
+    margin-bottom: -0.5px;
+}
+
+
+/* contact form */
+
+label {
+    color: #777777;
+}
+
+textarea {
+    max-width: 100%;
+    max-height: 175px;
+    min-height: 30px;
+}
+
+.submit-btn {
+    width: 150px;
+}
+
+.submit-btn:hover {
+    border: 2px solid #bbb;
+    margin: -1px;
+}
+
+
+/* footer */
+
 .navbar-fixed-bottom {
     border-top: 5px solid #4aaaa5;
     background: #777777;
     color: #ffffff;
 }
 
-.container {
+.footer {
     padding: 15px;
     text-align: center;
 }
+
+
 /* ---------------------------------------- */
 
+
 /* slide nav containers out for more room */
+
 @media screen and (max-width: 992px) {
     .panel-default {
         width: 100%;
         float: left;
         margin-bottom: 70px;
     }
-
+    .panel-info {
+        margin-bottom: 10px;
+    }
     .page-header h3 {
         text-align: left;
     }
+    /* portfolio pics */
+    .portfolio-pic {
+        max-width: 89%;
+        margin: auto;
+        margin-bottom: 15px;
+        min-width: 225px;
+    }
+    .label {
+        width: 89.15%;
+        left: 5.5%;
+        bottom: -350px;
+    }
 }
 
-@media screen and (max-width: 475px) {
-    .navbar-fixed-top {
-        position: static;
-        top: 0;
-        left: 0
+@media screen and (max-width: 768px) {
+    .label {
+        bottom: -250px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    body {
+        min-width: 425px;
     }
     .container-fluid {
         padding: 0 5px;
     }
+    .personal-header {
+        padding-left: 20px;
+    }
+    .label {
+        bottom: -190px;
+    }
 }
-
