@@ -162,6 +162,19 @@ h3 {
     margin: 5px;
 }
 
+.portfolio-pic:hover {
+    border: 3px solid #bbb;
+    /* negative margin helps stabalize other element -- cleaner */
+    margin-bottom: -0.5px;
+}
+
+.hangman {
+    width: 56%;
+}
+
+.hangman:hover{
+    border: 0px solid #ffffff;
+}
 .portfolio-row {
     margin: -45px -15px 0 -15px;
 }
@@ -177,12 +190,6 @@ h3 {
     line-height: 40px;
     font-size: 21px;
     background-color: #4aaaa5;
-}
-
-.portfolio-pic:hover {
-    border: 3px solid #bbb;
-    /* negative margin helps stabalize other element -- cleaner */
-    margin-bottom: -0.5px;
 }
 
 
